@@ -1,28 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tu Nombre — Portfolio</title>
+  <meta name="description" content="Portfolio de Tu Nombre — proyectos, formación y contacto." />
+  <meta name="theme-color" content="#0f1720" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Feel free to reach out to me at <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    </header>
-    <main>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li>Project 1</li>
-                <li>Project 2</li>
-                <li>Project 3</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Your Name</p>
-    </footer>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="brand-title">Tu Nombre</h1>
+        <p class="brand-sub">Frontend · UX · Aprendizaje continuo</p>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto" class="btn-primary">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2 id="hero-title">Hola, soy Tu Nombre</h2>
+          <p class="muted">Construyo interfaces accesibles y rápidas. Estoy aprendiendo nuevas tecnologías y comparto mis proyectos aquí.</p>
+          <p class="hero-actions">
+            <a href="#proyectos" class="btn">Ver proyectos</a>
+            <a href="TuCV.pdf" class="btn-outline" download>Descargar CV</a>
+          </p>
+
+          <div class="social">
+            <a href="https://github.com/tuusuario" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <!-- GitHub SVG -->
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.86 2.33.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.6 7.6 0 008 4.6c.68.003 1.36.092 2 .27 1.52-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/tuusuario" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <!-- LinkedIn SVG -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8.98 8h3.84v2.17h.05c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.2V24h-4v-8.02c0-1.91-.03-4.37-2.66-4.37-2.66 0-3.07 2.08-3.07 4.24V24h-4z"/></svg>
+            </a>
+            <a href="https://twitter.com/tuusuario" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <!-- Twitter SVG -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 4.56a9.83 9.83 0 01-2.83.78 4.96 4.96 0 002.17-2.72 9.9 9.9 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.97 13.97 0 011.67 3.15a4.92 4.92 0 001.52 6.57 4.9 4.9 0 01-2.23-.62v.06a4.93 4.93 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.42A9.9 9.9 0 010 20.13a13.94 13.94 0 007.55 2.21c9.05 0 14-7.5 14-14 0-.21 0-.42-.02-.63A9.98 9.98 0 0024 4.56z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <img src="https://via.placeholder.com/320x320.png?text=Tu+Foto" alt="Foto de Tu Nombre" />
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section" aria-labelledby="proyectos-title">
+      <div class="container">
+        <h2 id="proyectos-title">Proyectos destacados</h2>
+        <div class="grid projects-grid">
+          <article class="card project-card">
+            <h3>Proyecto 1</h3>
+            <p class="muted">Breve descripción — tecnología usada y tu aporte.</p>
+            <p class="project-links"><a href="#">Ver demo</a> · <a href="#">Código</a></p>
+          </article>
+
+          <article class="card project-card">
+            <h3>Proyecto 2</h3>
+            <p class="muted">Breve descripción — retos y resultados.</p>
+            <p class="project-links"><a href="#">Ver demo</a> · <a href="#">Código</a></p>
+          </article>
+
+          <article class="card project-card">
+            <h3>Proyecto 3</h3>
+            <p class="muted">Enfoque en accesibilidad y rendimiento.</p>
+            <p class="project-links"><a href="#">Ver demo</a> · <a href="#">Código</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cursos" class="section" aria-labelledby="cursos-title">
+      <div class="container">
+        <h2 id="cursos-title">Cursos y formación</h2>
+        <div class="card">
+          <ul class="muted">
+            <li><strong>Curso:</strong> Nombre del curso — plataforma — % completado / fecha</li>
+            <li><strong>Nanodegree:</strong> Ejemplo — contenido principal</li>
+            <li><strong>Certificación:</strong> Nombre — emisor — fecha</li>
+          </ul>
+          <p class="muted">Puedes añadir enlaces a certificados o proyectos prácticos relacionados.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section" aria-labelledby="sobre-mi-title">
+      <div class="container">
+        <h2 id="sobre-mi-title">Sobre mí</h2>
+        <div class="card">
+          <p class="muted">Pequeña biografía: formación, intereses, cómo trabajas (p. ej. diseño iterativo, pruebas, revisión por pares). Menciona qué buscas: trabajo, freelance, prácticas, colaboraciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section" aria-labelledby="contacto-title">
+      <div class="container">
+        <h2 id="contacto-title">Contacto</h2>
+        <div class="grid contact-grid">
+          <div class="card contact-card">
+            <p class="muted">¿Quieres contratarme, hablar de un proyecto o colaborar? Escríbeme usando el formulario y te contesto por email.</p>
+
+            <!-- Ahora el formulario usa un fallback mailto (abre el cliente de correo) -->
+            <!-- Reemplaza data-email por tu dirección real -->
+            <form id="contact-form" class="contact-form" method="GET" data-email="tu@email.com">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+
+              <button type="submit" class="btn-primary">Enviar mensaje</button>
+
+              <div id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <aside class="card info-card" aria-label="Otros datos de contacto">
+            <h3>También puedes</h3>
+            <p class="muted">Enviar un email directo a <a id="mailto-link" href="mailto:tu@email.com">tu@email.com</a>.</p>
+            <p class="muted">Ver mi código en <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+
+            <h4>Redes</h4>
+            <p class="muted social-list">
+              <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a><br/>
+              <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">LinkedIn</a><br/>
+              <a href="https://twitter.com/tuusuario" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© 2025 Tu Nombre — Hecho con ❤️ · <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
 </body>
 </html>
