@@ -1,34 +1,74 @@
-# mi-portfolio
+<div align="center">
 
-Portfolio personal (sitio estático) hecho con **HTML/CSS/JavaScript** y publicado con **GitHub Pages**.
+# ¡Hey! Soy Elena Aguayo 👩🏻‍💻
 
-- **Demo:** `https://aguayoe.github.io/mi-portfolio/`
-- **Contacto:** `elena.aguayo@cchs.csic.es`
+Portfolio personal (sitio estático) con **HTML · CSS · JavaScript** publicado en **GitHub Pages**.
 
-## Qué encontrarás en la web
-- **Sobre mí** (introducción + “chips” de habilidades y lenguajes).
-- **Proyectos** (cards con demo/código).
-- **Publicaciones científicas** (con enlace a ORCID).
-- **Trayectoria profesional**.
-- **Formación** (separado en *Estudios* y *Cursos*).
-- **Competencias**.
-- **Contacto** (formulario con fallback `mailto:`).
+<!-- Fila de iconos/badges (estilo como tu imagen) -->
+<p>
+  <a href="https://aguayoe.github.io/mi-portfolio/" target="_blank">
+    <img alt="Demo" src="https://img.shields.io/badge/🌐%20Demo-GitHub%20Pages-22d3ee?style=for-the-badge" />
+  </a>
+</p>
 
-## Skills (tags)
-**Data / Research**
-- `Data Analysis`, `Statistical Analysis`, `Data Visualization`, `Reproducible Research`, `Scientific Communication`
+<p>
+  <a href="https://github.com/aguayoe" target="_blank">
+    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-aguayoe-111827?style=for-the-badge&logo=github" />
+  </a>
+  <a href="https://www.linkedin.com/in/elenaguayo/" target="_blank">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-elenaguayo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://orcid.org/0009-0005-8143-0428" target="_blank">
+    <img alt="ORCID" src="https://img.shields.io/badge/ORCID-0009--0005--8143--0428-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" />
+  </a>
+  <a href="https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es" target="_blank">
+    <img alt="Google Scholar" src="https://img.shields.io/badge/Google%20Scholar-Perfil-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" />
+  </a>
+  <a href="mailto:elena.aguayo@cchs.csic.es">
+    <img alt="Email" src="https://img.shields.io/badge/Email-elena.aguayo%40cchs.csic.es-334155?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
-**Tools**
-- `Git`, `GitHub`, `Linux`, `Jupyter`
+</div>
 
-**Programming Languages**
-- `Python`, `R`, `SQL`, `JavaScript`, `Bash`
+---
 
-## Perfiles
-- GitHub: `https://github.com/aguayoe`
-- LinkedIn: `https://www.linkedin.com/in/elenaguayo/`
-- ORCID: `https://orcid.org/0009-0005-8143-0428`
-- Google Scholar: `https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es`
+## Sobre este repositorio
+Este repositorio contiene mi portfolio personal: proyectos, publicaciones científicas, trayectoria y formación.
+Es un sitio **estático** (sin framework) para mantenerlo simple, rápido y fácil de editar.
+
+## Demo
+- `https://aguayoe.github.io/mi-portfolio/`
+
+## Secciones de la web
+- Inicio (presentación)
+- Sobre mí
+- Proyectos
+- Publicaciones científicas
+- Trayectoria profesional
+- Formación (Estudios / Cursos)
+- Contacto (formulario con fallback `mailto:`)
+
+---
+
+## Competencias (tags)
+<!-- “Chips” con badges -->
+![Data Analysis](https://img.shields.io/badge/Data%20Analysis-111827?style=flat-pill)
+![Statistical Analysis](https://img.shields.io/badge/Statistical%20Analysis-111827?style=flat-pill)
+![Data Visualization](https://img.shields.io/badge/Data%20Visualization-111827?style=flat-pill)
+![Reproducible Research](https://img.shields.io/badge/Reproducible%20Research-111827?style=flat-pill)
+![Scientific Communication](https://img.shields.io/badge/Scientific%20Communication-111827?style=flat-pill)
+![GitHub](https://img.shields.io/badge/GitHub-111827?style=flat-pill&logo=github&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-111827?style=flat-pill&logo=linux&logoColor=white)
+
+## Lenguajes de programación
+![Python](https://img.shields.io/badge/Python-22c55e?style=flat-pill&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-22c55e?style=flat-pill&logo=r&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-22c55e?style=flat-pill)
+![JavaScript](https://img.shields.io/badge/JavaScript-22c55e?style=flat-pill&logo=javascript&logoColor=111827)
+![Bash](https://img.shields.io/badge/Bash-22c55e?style=flat-pill&logo=gnubash&logoColor=white)
+
+---
 
 ## Publicar en GitHub Pages
 1. Ve a **Settings → Pages**
@@ -43,12 +83,3 @@ Opción simple con VS Code:
 1. Abre el repo en VS Code
 2. Instala la extensión **Live Server**
 3. Clic derecho en `index.html` → **Open with Live Server**
-
-## Contacto (formulario)
-El formulario usa un fallback `mailto:` y toma el email desde este atributo en `index.html`:
-
-```html
-<form id="contact-form" data-email="elena.aguayo@cchs.csic.es">
-```
-
-> Si prefieres envíos “reales” (sin abrir el cliente de correo), se puede integrar Formspree/Getform o un backend ligero.
