@@ -3,51 +3,119 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Elena Aguayo — Portfolio</title>
   <meta name="description" content="Portfolio de Elena Aguayo — proyectos, formación y contacto." />
-  <meta name="theme-color" content="#0f1720" />
+
+  <!-- Canonical (ajusta si usas dominio propio) -->
+  <link rel="canonical" href="https://aguayoe.github.io/mi-portfolio/" />
+
+  <!-- Theme color (se actualiza vía JS según tema) -->
+  <meta name="theme-color" content="#0f1720" id="theme-color" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elena Aguayo — Portfolio" />
+  <meta property="og:description" content="Proyectos, formación y contacto." />
+  <meta property="og:url" content="https://aguayoe.github.io/mi-portfolio/" />
+  <!-- Puedes reemplazar por una imagen tipo /og-image.png más adelante -->
+  <meta property="og:image" content="https://aguayoe.github.io/mi-portfolio/avatar.webp" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elena Aguayo — Portfolio" />
+  <meta name="twitter:description" content="Proyectos, formación y contacto." />
+  <meta name="twitter:image" content="https://aguayoe.github.io/mi-portfolio/avatar.webp" />
+
+  <!-- Favicon (data URI sencillo; si luego quieres, lo cambiamos a un archivo .ico/.png) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306b6d4'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-size='34' font-family='Arial' fill='%23042227'%3EEA%3C/text%3E%3C/svg%3E" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <h1 class="brand-title">Elena Aguayo</h1>
+        <p class="brand-title">Elena Aguayo</p>
         <p class="brand-sub">Data scientist</p>
       </div>
-      <nav class="main-nav" aria-label="Navegación principal">
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="icon-btn"
+          id="theme-toggle"
+          aria-label="Cambiar tema (claro/oscuro)"
+          title="Cambiar tema"
+        >
+          <span class="icon" aria-hidden="true">◐</span>
+        </button>
+
+        <button
+          type="button"
+          class="icon-btn hamburger"
+          id="nav-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
         <a href="#proyectos">Proyectos</a>
         <a href="#cursos">Cursos</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#contacto" class="btn-primary">Contacto</a>
       </nav>
     </div>
+
+    <!-- Overlay para móvil -->
+    <div class="nav-overlay" id="nav-overlay" hidden></div>
   </header>
 
-  <main>
+  <main id="contenido">
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h2 id="hero-title">Hola, soy Elena Aguayo</h2>
-          <p class="muted">Ciencia abierta. Estoy aprendiendo nuevas tecnologías y comparto mis proyectos aquí.</p>
-          <p class="hero-actions">
-            <a href="#proyectos" class="btn">Ver proyectos</a>
+          <h1 id="hero-title">Hola, soy Elena Aguayo</h1>
+          <p class="muted">
+            Ciencia abierta. Estoy aprendiendo nuevas tecnologías y comparto mis proyectos aquí.
           </p>
 
-          <div class="social">
+          <p class="hero-actions">
+            <a href="#proyectos" class="btn">Ver proyectos</a>
+            <a href="#contacto" class="btn-outline">Contactar</a>
+          </p>
+
+          <div class="social" aria-label="Redes sociales">
             <a href="https://github.com/aguayoe" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-              <!-- GitHub SVG -->
-              <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.86 2.33.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.6 7.6 0 008 4.6c.68.003 1.36.092 2 .27 1.52-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z" />
+              </svg>
             </a>
-            <a href="www.linkedin.com/in/elenaguayo" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <!-- LinkedIn SVG -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8.98 8h3.84v2.17h.05c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.2V24h-4v-8.02c0-1.91-.03-4.37-2.66-4.37-2.66 0-3.07 2.08-3.07 4.24V24h-4z"/></svg>
+
+            <a href="https://www.linkedin.com/in/elenaguayo/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.53-1 1.83-2.2 3.77-2.2C23 8 24 10.2 24 13.2V24h-4v-9.5c0-2.3-.04-5.2-3.2-5.2-3.2 0-3.7 2.5-3.7 5V24h-4V8z"/>
+              </svg>
             </a>
           </div>
         </div>
 
-        <div class="hero-image" aria-hidden="true">
-          <img src="avatar.webp" alt="Foto" />
+        <div class="hero-image">
+          <img
+            src="avatar.webp"
+            alt="Foto de Elena Aguayo"
+            width="320"
+            height="320"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
@@ -55,23 +123,52 @@
     <section id="proyectos" class="section" aria-labelledby="proyectos-title">
       <div class="container">
         <h2 id="proyectos-title">Proyectos destacados</h2>
+        <p class="muted">Sustituye los placeholders por tus proyectos reales (demo y repositorio).</p>
+
         <div class="grid projects-grid">
           <article class="card project-card">
             <h3>Proyecto 1</h3>
             <p class="muted">Breve descripción — tecnología usada y tu aporte.</p>
-            <p class="project-links"><a href="#">Ver demo</a> · <a href="#">Código</a></p>
+            <ul class="tags" aria-label="Tecnologías">
+              <li>Python</li>
+              <li>ML</li>
+              <li>Data</li>
+            </ul>
+            <p class="project-links">
+              <a href="#" rel="nofollow">Ver demo</a>
+              <span aria-hidden="true"> · </span>
+              <a href="#" rel="nofollow">Código</a>
+            </p>
           </article>
 
           <article class="card project-card">
             <h3>Proyecto 2</h3>
             <p class="muted">Breve descripción — retos y resultados.</p>
-            <p class="project-links"><a href="#">Ver demo</a> · <a href="#">Código</a></p>
+            <ul class="tags" aria-label="Tecnologías">
+              <li>EDA</li>
+              <li>SQL</li>
+              <li>Viz</li>
+            </ul>
+            <p class="project-links">
+              <a href="#" rel="nofollow">Ver demo</a>
+              <span aria-hidden="true"> · </span>
+              <a href="#" rel="nofollow">Código</a>
+            </p>
           </article>
 
           <article class="card project-card">
             <h3>Proyecto 3</h3>
             <p class="muted">Enfoque en accesibilidad y rendimiento.</p>
-            <p class="project-links"><a href="#">Ver demo</a> · <a href="#">Código</a></p>
+            <ul class="tags" aria-label="Tecnologías">
+              <li>Web</li>
+              <li>CSS</li>
+              <li>JS</li>
+            </ul>
+            <p class="project-links">
+              <a href="#" rel="nofollow">Ver demo</a>
+              <span aria-hidden="true"> · </span>
+              <a href="#" rel="nofollow">Código</a>
+            </p>
           </article>
         </div>
       </div>
@@ -82,7 +179,7 @@
         <h2 id="cursos-title">Cursos y formación</h2>
         <div class="card">
           <ul class="muted">
-            <li><strong>Curso:</strong> Nombre del curso — plataforma — % completado / fecha</li>
+            <li><strong>Curso:</strong> Nombre del curso — plataforma — fecha</li>
             <li><strong>Nanodegree:</strong> Ejemplo — contenido principal</li>
             <li><strong>Certificación:</strong> Nombre — emisor — fecha</li>
           </ul>
@@ -95,7 +192,10 @@
       <div class="container">
         <h2 id="sobre-mi-title">Sobre mí</h2>
         <div class="card">
-          <p class="muted">Pequeña biografía: formación, intereses, cómo trabajas (p. ej. diseño iterativo, pruebas, revisión por pares). Menciona qué buscas: trabajo, freelance, prácticas, colaboraciones.</p>
+          <p class="muted">
+            Pequeña biografía: formación, intereses, cómo trabajas (p. ej. diseño iterativo, pruebas, revisión por pares).
+            Menciona qué buscas: trabajo, freelance, prácticas, etc.
+          </p>
         </div>
       </div>
     </section>
@@ -103,37 +203,44 @@
     <section id="contacto" class="section" aria-labelledby="contacto-title">
       <div class="container">
         <h2 id="contacto-title">Contacto</h2>
+
         <div class="grid contact-grid">
           <div class="card contact-card">
-            <p class="muted">¿Quieres hablar de un proyecto o colaborar? Escríbeme usando el formulario y te contesto por email.</p>
+            <p class="muted">
+              ¿Quieres hablar de un proyecto o colaborar? Escríbeme usando el formulario y te contesto por email.
+            </p>
 
-            <!-- Ahora el formulario usa un fallback mailto (abre el cliente de correo) -->
-            <!-- Reemplaza data-email por tu dirección real -->
+            <!-- Fallback mailto -->
             <form id="contact-form" class="contact-form" method="GET" data-email="elena.aguayo@cchs.csic.es">
               <label for="name">Nombre</label>
-              <input id="name" name="name" type="text" required />
+              <input id="name" name="name" type="text" autocomplete="name" required />
 
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
+              <input id="email" name="email" type="email" autocomplete="email" required />
 
               <label for="message">Mensaje</label>
               <textarea id="message" name="message" rows="6" required></textarea>
 
               <button type="submit" class="btn-primary">Enviar mensaje</button>
-
               <div id="form-status" role="status" aria-live="polite"></div>
             </form>
           </div>
 
           <aside class="card info-card" aria-label="Otros datos de contacto">
             <h3>También puedes</h3>
-            <p class="muted">Enviar un email directo a <a id="mailto-link" href="mailto:tu@email.com">elena.aguayo@cchs.csic.es</a>.</p>
-            <p class="muted">Ver mi código en <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+            <p class="muted">
+              Enviar un email directo a
+              <a id="mailto-link" href="mailto:elena.aguayo@cchs.csic.es">elena.aguayo@cchs.csic.es</a>.
+            </p>
+            <p class="muted">
+              Ver mi código en
+              <a href="https://github.com/aguayoe" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            </p>
 
             <h4>Redes</h4>
             <p class="muted social-list">
               <a href="https://github.com/aguayoe" target="_blank" rel="noopener noreferrer">GitHub</a><br/>
-              <a href="www.linkedin.com/in/elenaguayo" target="_blank" rel="noopener noreferrer">LinkedIn</a><br/>
+              <a href="https://www.linkedin.com/in/elenaguayo/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br/>
             </p>
           </aside>
         </div>
@@ -143,10 +250,11 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p class="muted">© 2025 Elena Aguayo · <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+      <p class="muted">© 2026 Elena Aguayo · <a href="https://github.com/aguayoe" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     </div>
   </footer>
 
   <script src="scripts.js" defer></script>
 </body>
 </html>
+    
