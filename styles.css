@@ -126,7 +126,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .main-nav a{color: var(--muted);font-weight:800;}
 .main-nav a:hover{ color: var(--text); }
 
-/* CONTACTO (botón del menú): mismo azul que CTAs */
+/* Contacto (botón del menú): fondo azul, texto gris en reposo */
 .btn-primary{
   background: var(--cta-blue);
   color: var(--cta-blue-ink);
@@ -137,6 +137,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   cursor:pointer;
   font-weight: 900;
 }
+
+/* gris más oscuro (menos blanco) SOLO en el botón Contacto del menú */
+.main-nav .btn-primary{
+  color: rgba(230, 238, 243, 0.82);
+}
+.main-nav .btn-primary:hover{
+  color: #ffffff;
+}
+
 .btn-primary:hover{
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -193,6 +202,8 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
 .projects-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .project-card h3{margin-top:0}
 
+.project-links a{font-weight:850;}
+
 .list{ margin: 0; padding-left: 18px; }
 .list li{ margin: 8px 0; }
 
@@ -235,13 +246,19 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
 
 .nav-overlay{position: fixed;inset: 0;background: rgba(0,0,0,0.45);}
 
-/* Contact section: light blue background + readable text */
+/* Contact section base */
 .section-contact{
   background: var(--contact-bg);
   border-top: 1px solid var(--contact-border);
   border-bottom: 1px solid var(--contact-border);
 }
-.section-contact h2,
+
+/* Título de Contacto en blanco (porque dices que el fondo es oscuro) */
+section#contacto.section.section-contact h2{
+  color: #ffffff !important;
+}
+
+/* dentro de contacto mantenemos reglas de lectura */
 .section-contact h3{
   color: var(--contact-text);
 }
@@ -273,6 +290,11 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
   color: #fff;
 }
 
+/* FORCE (por si algo pisa el fondo) */
+section#contacto.section.section-contact{
+  background: var(--contact-bg) !important;
+}
+
 @media (max-width:900px){
   .container{padding:22px}
   .hero-inner{grid-template-columns:1fr}
@@ -289,15 +311,4 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
 
   body.nav-open .main-nav{display:flex}
   body.nav-open #nav-overlay{display:block}
-}
-
-/* --- FORCE Contact section background (debug + final) --- */
-section#contacto.section.section-contact{
-  background: rgba(56, 189, 248, 0.16) !important;
-}
-
-/* para que se note el panel */
-section#contacto.section.section-contact .container{
-  padding-top: 36px;
-  padding-bottom: 36px;
 }
