@@ -1,27 +1,38 @@
-# Portfolio para GitHub Pages
+# Portfolio para GitHub Pages (HTML/CSS/JS)
 
-Plantilla lista para publicar en GitHub Pages. Incluye:
+Portfolio estático listo para publicar en **GitHub Pages**.
+
+## Demo
+- URL: `https://aguayoe.github.io/mi-portfolio/`
+
+## Qué incluye
 - Secciones: Proyectos, Cursos, Sobre mí, Contacto.
-- Formulario de contacto con fallback vía mailto: (abre el cliente de correo del usuario).
-- Enlaces a redes sociales.
+- **Menú móvil** tipo hamburguesa (accesible).
+- **Tema claro/oscuro** (guarda preferencia en `localStorage` y respeta `prefers-color-scheme`).
+- Formulario de contacto con **fallback vía `mailto:`** (abre el cliente de correo del usuario).
+- Mejoras básicas de SEO (Open Graph/Twitter card) y accesibilidad.
 
-Pasos rápidos para publicar en GitHub Pages
-1. Crea un repositorio en GitHub (`aguayoe/mi-portfolio` ya existe).
-2. Copia los archivos `index.html`, `styles.css`, `scripts.js` y `TuCV.pdf` (opcional) al repo.
-3. Empuja a la rama `main`.
-4. Ve a Settings > Pages y activa Pages desde la rama `main` y carpeta `/ (root)`. En unos minutos tu sitio estará activo en la URL indicada.
+## Publicar en GitHub Pages
+1. Ve a **Settings → Pages**.
+2. En **Build and deployment**:
+   - Source: `Deploy from a branch`
+   - Branch: `main`
+   - Folder: `/ (root)`
+3. Espera 1–5 minutos y abre la URL del apartado Demo.
 
-Contacto: mailto fallback
-- El formulario ya no usa servicios externos. En su lugar abre el cliente de correo del usuario con un mailto prellenado.
-- Reemplaza la dirección en el atributo `data-email` del form en `index.html` por tu email real:
-  <form id="contact-form" data-email="tu@email.com">
+## Desarrollo local (opción simple)
+- Abre la carpeta en VS Code
+- Instala la extensión **Live Server**
+- Clic derecho en `index.html` → **Open with Live Server**
 
-Opciones futuras
-- Si prefieres tener envíos almacenados (sin abrir cliente), puedes usar:
-  - un endpoint en Netlify Functions o similar,
-  - servicios como Formspree/Getform/EmailJS,
-  - o recibir los mensajes a través de un webhook que almacene en una hoja de cálculo.
-- Puedo integrar más adelante reCAPTCHA o un honeypot para reducir spam.
+## Contacto (formulario)
+El formulario usa un fallback `mailto:` y toma el email desde este atributo en `index.html`:
 
-Commit y subida
-He subido y sobrescrito los archivos en la rama `main` con el mensaje de commit "Add portfolio files".
+```html
+<form id="contact-form" data-email="TU_EMAIL_AQUI">
+```
+
+## Personalización rápida
+- Sustituye los placeholders en “Proyectos destacados” (demo y repositorio).
+- Revisa enlaces a redes sociales.
+- (Opcional) cambia el `og:image` por una imagen propia tipo `og-image.png`.
