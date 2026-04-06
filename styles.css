@@ -1,30 +1,18 @@
 :root{
-  /* Solo modo oscuro */
   --bg:#0b1220;
   --bg2:#070f1c;
 
   --text:#e6eef3;
   --muted:#a8b3bf;
 
-  /* Acento y enlaces (mejor contraste) */
   --accent:#22d3ee;
   --accent-ink:#042027;
 
   --link:#60a5fa;
   --link-hover:#93c5fd;
 
-  --chip-bg: rgba(255,255,255,0.045);
-  --chip-border: rgba(255,255,255,0.10);
-
-  /* Chips “verde” para lenguajes */
-  --chip-green-bg: rgba(34,197,94,0.14);
-  --chip-green-border: rgba(34,197,94,0.30);
-  --chip-green-text: #a7f3d0;
-
   --card: rgba(255,255,255,0.04);
   --border: rgba(255,255,255,0.10);
-
-  /* Más “aire” y menos pesadez */
   --shadow: 0 10px 26px rgba(2,6,23,0.55);
 
   --radius:16px;
@@ -58,7 +46,7 @@ a{
 }
 a:hover{
   color: var(--link-hover);
-  text-decoration: underline; /* línea por debajo */
+  text-decoration: underline;
 }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
   outline:none;
@@ -66,7 +54,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: 12px;
 }
 
-/* Para que también los botones tengan “línea por debajo” al hover */
 .btn:hover,
 .btn-outline:hover,
 .btn-primary:hover,
@@ -114,7 +101,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .header-actions{display:flex;gap:10px;align-items:center}
 
-/* Icon button */
 .icon-btn{
   display:inline-flex;
   align-items:center;
@@ -158,12 +144,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--muted);
   font-weight:800;
 }
-.main-nav a:hover{
-  color: var(--text);
-}
-.main-nav .btn-primary{
-  color: var(--accent-ink);
-}
+.main-nav a:hover{ color: var(--text); }
+.main-nav .btn-primary{ color: var(--accent-ink); }
 
 .hero{padding:64px 0 36px}
 .hero-inner{
@@ -209,7 +191,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-weight:850;
   background: transparent;
 }
-
 .btn-primary{
   background:var(--accent);
   color:var(--accent-ink);
@@ -221,6 +202,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-weight: 850;
 }
 
+/* Icon row */
 .social{
   margin-top:16px;
   display:flex;
@@ -228,76 +210,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   align-items:center;
   gap: 10px;
 }
-.social a{
-  color: var(--muted);
-}
-.social a:hover{
-  color: var(--text);
-}
-
-.chip-link{
-  display:inline-flex;
-  align-items:center;
-}
-.chip{
+.icon-link{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-width: 34px;
-  height: 28px;
-  padding: 0 10px;
+  width:40px;
+  height:40px;
   border-radius: 999px;
   border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
   color: var(--text);
-  font-weight: 900;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
+}
+.icon-link:hover{
+  background: rgba(255,255,255,0.06);
 }
 
+/* Avatar */
 .hero-image img{
   width:100%;
   height:auto;
   border-radius: 22px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
-}
-
-/* Skills chips block (como el ejemplo) */
-.hero-skills{
-  margin-top: 22px;
-  display: grid;
-  gap: 22px;
-}
-.skills-title{
-  margin: 0 0 10px 0;
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
-}
-.skills-block{
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
-}
-.chips{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display:flex;
-  flex-wrap:wrap;
-  gap: 10px;
-}
-.chips li{
-  background: var(--chip-bg);
-  border: 1px solid var(--chip-border);
-  color: var(--text);
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 800;
-  font-size: 0.95rem;
-}
-.chips-green li{
-  background: var(--chip-green-bg);
-  border-color: var(--chip-green-border);
-  color: var(--chip-green-text);
 }
 
 .section{padding:32px 0}
@@ -317,22 +251,15 @@ h2{
 }
 
 .grid{display:grid;gap:18px}
-
 .projects-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .project-card h3{margin-top:0}
-
-.project-links a{
-  font-weight: 850;
-}
+.project-links a{ font-weight: 850; }
 
 /* Lists */
-.list{
-  margin: 0;
-  padding-left: 18px;
-}
-.list li{margin: 8px 0}
+.list{ margin: 0; padding-left: 18px; }
+.list li{ margin: 8px 0; }
 
-/* Tags */
+/* Tags (proyectos) */
 .tags{
   list-style:none;
   padding:0;
@@ -350,10 +277,49 @@ h2{
   font-weight: 850;
 }
 
-/* Layout helpers */
-.two-col{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+/* Skills chips (como en la imagen) */
+.skills-grid{
+  margin-top: 14px;
+  display: grid;
+  gap: 18px;
 }
+.skills-title{
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+.skills-block{
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.chips{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 12px;
+}
+.chips li{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: var(--text);
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.98rem;
+}
+
+/* “verde” suave para lenguajes */
+.chips-green li{
+  background: rgba(34,197,94,0.14);
+  border-color: rgba(34,197,94,0.30);
+  color: #a7f3d0;
+}
+
+/* Layout helpers */
+.two-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .contact-grid{grid-template-columns:1fr 340px}
 .contact-form label{display:block;margin-top:12px;font-weight:900}
@@ -374,19 +340,6 @@ h2{
   text-align:center;
   color:var(--muted);
   font-size:0.98rem
-}
-
-/* Visually hidden helper */
-.sr-only{
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
 }
 
 /* NAV móvil */
