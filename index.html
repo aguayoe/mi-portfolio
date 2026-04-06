@@ -51,12 +51,12 @@
       </div>
 
       <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#publicaciones">Publicaciones</a>
         <a href="#trayectoria">Trayectoria</a>
         <a href="#formacion">Formación</a>
-        <a href="#competencias">Competencias</a>
         <a href="#contacto" class="btn-primary">Contacto</a>
       </nav>
     </div>
@@ -65,18 +65,13 @@
   </header>
 
   <main id="contenido">
-    <!-- SOBRE MÍ primero (hero) -->
-    <section class="hero" id="sobre-mi" aria-labelledby="hero-title">
+    <!-- PRESENTACIÓN (hero) -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1 id="hero-title">Sobre mí</h1>
+          <h1 id="hero-title">Hola, soy Elena Aguayo</h1>
           <p class="lead">
-            Soy <strong>Elena Aguayo</strong>. Me interesa la ciencia abierta y el uso de datos para responder preguntas
-            reales. Estoy aprendiendo nuevas tecnologías y comparto mis proyectos y publicaciones aquí.
-          </p>
-
-          <p class="muted">
-            Contacto directo: <a href="mailto:elena.aguayo@cchs.csic.es">elena.aguayo@cchs.csic.es</a>
+            Ciencia abierta · datos · investigación. Comparto proyectos, publicaciones y experiencia profesional.
           </p>
 
           <p class="hero-actions">
@@ -85,58 +80,38 @@
             <a href="#contacto" class="btn-outline">Contactar</a>
           </p>
 
-          <div class="social" aria-label="Redes y perfiles">
-            <a href="https://github.com/aguayoe" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <div class="social" aria-label="Perfiles">
+            <!-- GitHub (ya lo tenías) -->
+            <a href="https://github.com/aguayoe" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="icon-link">
               <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                 <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z" />
               </svg>
             </a>
 
-            <a href="https://www.linkedin.com/in/elenaguayo/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <!-- LinkedIn (SVG) -->
+            <a href="https://www.linkedin.com/in/elenaguayo/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="icon-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.53-1 1.83-2.2 3.77-2.2C23 8 24 10.2 24 13.2V24h-4v-9.5c0-2.3-.04-5.2-3.2-5.2-3.2 0-3.7 2.5-3.7 5V24h-4V8z"/>
               </svg>
             </a>
 
-            <!-- ORCID -->
-            <a href="https://orcid.org/0009-0005-8143-0428" aria-label="ORCID" target="_blank" rel="noopener noreferrer" class="chip-link">
-              <span aria-hidden="true" class="chip">iD</span>
-              <span class="sr-only">ORCID</span>
+            <!-- ORCID (SVG proporcionado) -->
+            <a href="https://orcid.org/0009-0005-8143-0428" aria-label="ORCID" target="_blank" rel="noopener noreferrer" class="icon-link">
+              <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M32 16c0 8.837-7.163 16-16 16-8.838 0-16-7.163-16-16C0 7.162 7.162 0 16 0c8.837 0 16 7.162 16 16Z" fill="#A6CE39"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.813 9.637h-5.45v13.9h5.474c4.555 0 7.35-3.378 7.35-6.95 0-1.635-.562-3.372-1.77-4.704-1.215-1.336-3.065-2.246-5.605-2.246ZM18.6 21.3h-2.813v-9.425H18.5c1.823 0 3.12.552 3.96 1.4.842.849 1.252 2.021 1.252 3.312 0 .784-.239 1.967-.993 2.948-.745.969-2.01 1.765-4.119 1.765Zm5.311-4.026c-.251 1.74-1.494 4.276-5.311 4.276h-3.063H18.6c3.817 0 5.06-2.536 5.311-4.276Zm1.812-2.405c-.657-2.601-2.85-4.982-6.91-4.982h-5.2 5.2c4.06 0 6.253 2.38 6.91 4.982Zm.215 1.718ZM8.363 9.675v13.887h2.425V9.675H8.363Zm2.175 13.637H8.612h1.925ZM9.575 8.65c.84 0 1.513-.689 1.513-1.513 0-.823-.673-1.512-1.513-1.512-.838 0-1.512.674-1.512 1.513 0 .823.672 1.512 1.512 1.512Z" fill="#fff"/>
+              </svg>
             </a>
 
-            <!-- Google Scholar (solo aquí, no al final con el resto) -->
-            <a href="https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer" class="chip-link">
-              <span aria-hidden="true" class="chip">GS</span>
-              <span class="sr-only">Google Scholar</span>
+            <!-- Google Scholar (SVG proporcionado) -->
+            <a href="https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer" class="icon-link">
+              <svg width="22" height="22" viewBox="0 0 512 512" aria-hidden="true">
+                <path fill="#4285f4" d="M256 411.12L0 202.667 256 0z"/>
+                <path fill="#356ac3" d="M256 411.12l256-208.453L256 0z"/>
+                <circle fill="#a0c3ff" cx="256" cy="362.667" r="149.333"/>
+                <path fill="#76a7fa" d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"/>
+              </svg>
             </a>
-          </div>
-
-          <!-- Bloque tipo “chips” como el ejemplo -->
-          <div class="hero-skills" aria-label="Resumen de habilidades">
-            <div class="skills-block">
-              <h2 class="skills-title">Skills</h2>
-              <ul class="chips" aria-label="Skills">
-                <li>Data Analysis</li>
-                <li>Statistical Analysis</li>
-                <li>Data Visualization</li>
-                <li>Reproducible Research</li>
-                <li>Scientific Communication</li>
-                <li>GitHub</li>
-                <li>Linux</li>
-                <li>Web Development</li>
-              </ul>
-            </div>
-
-            <div class="skills-block">
-              <h2 class="skills-title">Programming Languages</h2>
-              <ul class="chips chips-green" aria-label="Lenguajes de programación">
-                <li>R</li>
-                <li>Python</li>
-                <li>SQL</li>
-                <li>JavaScript</li>
-                <li>Bash</li>
-              </ul>
-            </div>
           </div>
         </div>
 
@@ -149,6 +124,46 @@
             loading="lazy"
             decoding="async"
           />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ (debajo de la presentación) -->
+    <section id="sobre-mi" class="section" aria-labelledby="sobre-mi-title">
+      <div class="container">
+        <h2 id="sobre-mi-title">Sobre mí</h2>
+        <div class="card">
+          <p class="muted">
+            (Escribe aquí 5–8 líneas: qué haces, en qué temas trabajas, qué te interesa, qué tipo de proyectos buscas.)
+          </p>
+
+          <!-- Chips estilo el ejemplo -->
+          <div class="skills-grid">
+            <div class="skills-block">
+              <h3 class="skills-title">Competencias</h3>
+              <ul class="chips" aria-label="Competencias">
+                <li>Data Analysis</li>
+                <li>Statistical Analysis</li>
+                <li>Data Visualization</li>
+                <li>Reproducible Research</li>
+                <li>Scientific Communication</li>
+                <li>GitHub</li>
+                <li>Linux</li>
+                <li>Web Development</li>
+              </ul>
+            </div>
+
+            <div class="skills-block">
+              <h3 class="skills-title">Lenguajes de programación</h3>
+              <ul class="chips chips-green" aria-label="Lenguajes de programación">
+                <li>R</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+                <li>Bash</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -216,15 +231,13 @@
               <strong>Título de publicación (Año)</strong><br/>
               <span class="muted">Revista/Congreso · DOI/URL</span>
             </li>
-            <li>
-              <strong>Otra publicación (Año)</strong><br/>
-              <span class="muted">Revista/Congreso · DOI/URL</span>
-            </li>
           </ul>
 
           <p class="muted">
             Listado completo en
-            <a href="https://orcid.org/0009-0005-8143-0428" target="_blank" rel="noopener noreferrer">ORCID</a>.
+            <a href="https://orcid.org/0009-0005-8143-0428" target="_blank" rel="noopener noreferrer">ORCID</a>
+            y
+            <a href="https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
           </p>
         </div>
       </div>
@@ -238,9 +251,9 @@
             <h3>Puesto — Organización</h3>
             <p class="muted">Mes/Año – Mes/Año · Ciudad/Remoto</p>
             <ul class="list">
-              <li>Logro/impacto medible (p. ej. “reduje X%”, “automaticé Y”).</li>
+              <li>Logro/impacto medible.</li>
               <li>Responsabilidad principal (herramientas/stack).</li>
-              <li>Colaboración con equipos / publicaciones / etc.</li>
+              <li>Resultado.</li>
             </ul>
           </article>
 
@@ -285,32 +298,6 @@
       </div>
     </section>
 
-    <section id="competencias" class="section" aria-labelledby="competencias-title">
-      <div class="container">
-        <h2 id="competencias-title">Competencias</h2>
-
-        <div class="grid two-col">
-          <div class="card">
-            <h3>Datos y ML</h3>
-            <ul class="list">
-              <li>Modelado, validación, métricas</li>
-              <li>EDA, limpieza, reproducibilidad</li>
-              <li>Visualización</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Herramientas</h3>
-            <ul class="list">
-              <li>Python · SQL</li>
-              <li>Git/GitHub</li>
-              <li>Jupyter</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="contacto" class="section" aria-labelledby="contacto-title">
       <div class="container">
         <h2 id="contacto-title">Contacto</h2>
@@ -343,12 +330,10 @@
               Email:
               <a id="mailto-link" href="mailto:elena.aguayo@cchs.csic.es">elena.aguayo@cchs.csic.es</a>.
             </p>
-
             <p class="muted">
               GitHub:
               <a href="https://github.com/aguayoe" target="_blank" rel="noopener noreferrer">aguayoe</a>.
             </p>
-
             <p class="muted">
               ORCID:
               <a href="https://orcid.org/0009-0005-8143-0428" target="_blank" rel="noopener noreferrer">0009-0005-8143-0428</a>.
@@ -374,4 +359,3 @@
   <script src="scripts.js" defer></script>
 </body>
 </html>
-    
