@@ -312,3 +312,16 @@ section#contacto.section.section-contact{
   body.nav-open .main-nav{display:flex}
   body.nav-open #nav-overlay{display:block}
 }
+
+/* FORCE: menú Contacto texto gris y hover blanco */
+nav#main-nav a.btn-primary{
+  color: rgba(230, 238, 243, 0.82) !important;
+}
+nav#main-nav a.btn-primary:hover{
+  color: #ffffff !important;
+}
+
+/* FORCE: título Contacto final en blanco */
+section#contacto h2#contacto-title{
+  color: #ffffff !important;
+}
