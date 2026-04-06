@@ -290,3 +290,14 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
   body.nav-open .main-nav{display:flex}
   body.nav-open #nav-overlay{display:block}
 }
+
+/* --- FORCE Contact section background (debug + final) --- */
+section#contacto.section.section-contact{
+  background: rgba(56, 189, 248, 0.16) !important;
+}
+
+/* para que se note el panel */
+section#contacto.section.section-contact .container{
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
