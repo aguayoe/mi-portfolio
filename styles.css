@@ -277,20 +277,23 @@ h2{
   font-weight: 850;
 }
 
-/* Skills chips (como en la imagen) */
+/* Skills chips */
 .skills-grid{
   margin-top: 14px;
   display: grid;
-  gap: 18px;
+  gap: 22px;
 }
 .skills-title{
   margin: 0 0 10px 0;
   font-size: 1.15rem;
   letter-spacing: -0.01em;
 }
+
+/* más “aire” alrededor de la línea y el contenido */
 .skills-block{
   border-top: 1px solid var(--border);
-  padding-top: 16px;
+  padding-top: 24px;   /* más separado de la línea */
+  margin-top: 18px;    /* más aire antes de la línea */
 }
 
 .chips{
@@ -302,19 +305,23 @@ h2{
   gap: 12px;
 }
 .chips li{
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
-  color: var(--text);
   padding: 12px 16px;
   border-radius: 999px;
   font-weight: 800;
   font-size: 0.98rem;
 }
 
-/* “verde” suave para lenguajes */
+/* Competencias en morado clarito */
+.chips-purple li{
+  background: rgba(167, 139, 250, 0.14);
+  border: 1px solid rgba(167, 139, 250, 0.30);
+  color: #e9d5ff;
+}
+
+/* Lenguajes en verde */
 .chips-green li{
   background: rgba(34,197,94,0.14);
-  border-color: rgba(34,197,94,0.30);
+  border: 1px solid rgba(34,197,94,0.30);
   color: #a7f3d0;
 }
 
@@ -340,6 +347,35 @@ h2{
   text-align:center;
   color:var(--muted);
   font-size:0.98rem
+}
+
+/* Botón flotante “subir arriba” */
+.scroll-top{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(11,18,32,0.75);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity .2s ease, transform .2s ease, background .2s ease;
+}
+.scroll-top:hover{
+  background: rgba(255,255,255,0.06);
+}
+.scroll-top.is-visible{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 /* NAV móvil */
