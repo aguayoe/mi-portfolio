@@ -23,6 +23,13 @@
 
   --focus: 0 0 0 3px rgba(34,211,238,0.35);
 
+  /* Contact section (light blue) */
+  --contact-bg: rgba(56, 189, 248, 0.16);
+  --contact-border: rgba(56, 189, 248, 0.25);
+  --contact-text: #0b1220;
+  --contact-muted: rgba(11,18,32,0.72);
+  --contact-link: #0b4a6f;
+
   color-scheme: dark;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
@@ -108,13 +115,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   cursor:pointer;
 }
 
-.hamburger-lines{
-  width:18px;height:2px;background: currentColor;position:relative;display:block;border-radius: 2px;
-}
+.hamburger-lines{width:18px;height:2px;background: currentColor;position:relative;display:block;border-radius: 2px;}
 .hamburger-lines::before,
-.hamburger-lines::after{
-  content:"";width:18px;height:2px;background: currentColor;position:absolute;left:0;border-radius: 2px;
-}
+.hamburger-lines::after{content:"";width:18px;height:2px;background: currentColor;position:absolute;left:0;border-radius: 2px;}
 .hamburger-lines::before{top:-6px}
 .hamburger-lines::after{top:6px}
 
@@ -123,14 +126,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .main-nav a:hover{ color: var(--text); }
 
 .btn-primary{
-  background:var(--accent);
-  color:var(--accent-ink);
+  background: var(--cta-blue);
+  color: var(--cta-blue-ink);
   padding:12px 16px;
   border-radius:14px;
   text-decoration:none;
-  border:none;
+  border:1px solid transparent;
   cursor:pointer;
-  font-weight: 850;
+  font-weight: 900;
 }
 .btn-primary:hover{
   text-decoration: underline;
@@ -156,12 +159,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-weight:900;
   text-decoration:none;
   background: transparent;
-  border:1px solid var(--border);
+  border:1px solid var(--cta-blue);
   color: var(--text);
 }
 .btn-hover-fill:hover{
   background: var(--cta-blue);
-  border-color: transparent;
+  border-color: var(--cta-blue);
   color: var(--cta-blue-ink);
   text-decoration: none;
 }
@@ -173,9 +176,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .icon-link:hover{background: rgba(255,255,255,0.06);}
 
-.hero-image img{
-  width:100%;height:auto;border-radius: 22px;box-shadow: var(--shadow);border: 1px solid var(--border);
-}
+.hero-image img{width:100%;height:auto;border-radius: 22px;box-shadow: var(--shadow);border: 1px solid var(--border);}
 
 .section{padding:32px 0}
 h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
@@ -206,28 +207,20 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
 .two-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .publications-grid{grid-template-columns: 1fr;}
-
-/* Tarjeta vertical */
-.publication-card--vertical{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-.publication-media img{
-  width:100%;
-  height:auto;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  display:block;
-}
-
+.publication-card--vertical{display:grid;grid-template-columns: 1fr;gap: 16px;}
+.publication-media img{width:100%;height:auto;border-radius: 14px;border: 1px solid var(--border);display:block;}
 .publication-links a{font-weight:850;}
+
+.timeline{position: relative;margin-top: 10px;padding-left: 18px;}
+.timeline::before{content:"";position:absolute;left: 6px;top: 4px;bottom: 4px;width: 2px;background: rgba(56,189,248,0.35);border-radius: 2px;}
+.timeline-item{position: relative;display: grid;grid-template-columns: 14px 1fr;gap: 12px;padding: 10px 0;}
+.timeline-dot{width: 12px;height: 12px;border-radius: 999px;background: var(--cta-blue);box-shadow: 0 0 0 3px rgba(56,189,248,0.18);margin-top: 4px;}
+.timeline-content{min-width:0}
+.timeline-title{margin-bottom:4px}
 
 .contact-grid{grid-template-columns:1fr 340px}
 .contact-form label{display:block;margin-top:12px;font-weight:900}
-.contact-form input,.contact-form textarea{
-  width:100%;padding:12px;margin-top:8px;border-radius:14px;border:1px solid var(--border);background: transparent;color:var(--text)
-}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;margin-top:8px;border-radius:14px;border:1px solid var(--border);background: transparent;color:var(--text)}
 
 .site-footer{border-top:1px solid var(--border);padding:22px 0;margin-top:34px;text-align:center;color:var(--muted);font-size:0.98rem}
 
@@ -240,6 +233,44 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
 .scroll-top.is-visible{ opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 .nav-overlay{position: fixed;inset: 0;background: rgba(0,0,0,0.45);}
+
+/* Contact section: light blue background + dark text */
+.section-contact{
+  background: var(--contact-bg);
+  border-top: 1px solid var(--contact-border);
+  border-bottom: 1px solid var(--contact-border);
+}
+.section-contact h2,
+.section-contact h3{
+  color: var(--contact-text);
+}
+.section-contact .muted{
+  color: var(--contact-muted);
+}
+.section-contact a{
+  color: var(--contact-link);
+}
+.section-contact a:hover{
+  color: #083a57;
+}
+.section-contact .card{
+  background: rgba(255,255,255,0.78);
+  border-color: rgba(11,18,32,0.10);
+  box-shadow: 0 12px 24px rgba(2,6,23,0.16);
+}
+.section-contact .contact-form input,
+.section-contact .contact-form textarea{
+  border-color: rgba(11,18,32,0.18);
+  background: rgba(255,255,255,0.85);
+  color: var(--contact-text);
+}
+.section-contact .contact-form label{
+  color: var(--contact-text);
+}
+.section-contact .btn-primary{
+  background: var(--cta-blue);
+  color: #fff;
+}
 
 @media (max-width:900px){
   .container{padding:22px}
