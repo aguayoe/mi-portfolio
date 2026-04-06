@@ -2,9 +2,9 @@
 
 # ¡Hey! Soy Elena Aguayo 👩🏻‍💻
 
-Portfolio personal (sitio estático) con **HTML · CSS · JavaScript** publicado en **GitHub Pages**.
+Personal portfolio (static site) built with **HTML · CSS · JavaScript**, published with **GitHub Pages**.  
+Portfolio personal (sitio estático) hecho con **HTML · CSS · JavaScript** y publicado con **GitHub Pages**.
 
-<!-- Fila de iconos/badges (estilo como tu imagen) -->
 <p>
   <a href="https://aguayoe.github.io/mi-portfolio/" target="_blank">
     <img alt="Demo" src="https://img.shields.io/badge/🌐%20Demo-GitHub%20Pages-22d3ee?style=for-the-badge" />
@@ -22,7 +22,7 @@ Portfolio personal (sitio estático) con **HTML · CSS · JavaScript** publicado
     <img alt="ORCID" src="https://img.shields.io/badge/ORCID-0009--0005--8143--0428-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" />
   </a>
   <a href="https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es" target="_blank">
-    <img alt="Google Scholar" src="https://img.shields.io/badge/Google%20Scholar-Perfil-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" />
+    <img alt="Google Scholar" src="https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" />
   </a>
   <a href="mailto:elena.aguayo@cchs.csic.es">
     <img alt="Email" src="https://img.shields.io/badge/Email-elena.aguayo%40cchs.csic.es-334155?style=for-the-badge&logo=gmail&logoColor=white" />
@@ -33,53 +33,58 @@ Portfolio personal (sitio estático) con **HTML · CSS · JavaScript** publicado
 
 ---
 
-## Sobre este repositorio
-Este repositorio contiene mi portfolio personal: proyectos, publicaciones científicas, trayectoria y formación.
-Es un sitio **estático** (sin framework) para mantenerlo simple, rápido y fácil de editar.
+## About this repository (EN)
+This repository contains my personal portfolio website: projects, publications, professional experience, education, and contact.
+It’s intentionally kept **framework-free** to be fast, simple, and easy to maintain.
 
-## Demo
+### Live demo
 - `https://aguayoe.github.io/mi-portfolio/`
 
-## Secciones de la web
-- Inicio (presentación)
-- Sobre mí
-- Proyectos
-- Publicaciones científicas
+### What you’ll find on the website
+- About me + skills 
+- Projects (CCHS-CSIC, RAG for archaeology, FAIRification for germplasm databases)
+- Publications 
+- Professional experience
+- Education (degrees) + courses/certifications
+- Conferences & workshops
+- Contact (form with `mailto:` fallback)
+
+---
+
+## Sobre este repositorio (ES)
+Este repositorio contiene mi web de portfolio: proyectos, publicaciones, trayectoria profesional, formación y contacto.
+Está hecho como sitio **estático y sin frameworks** para mantenerlo rápido, simple y fácil de actualizar.
+
+### Demo
+- `https://aguayoe.github.io/mi-portfolio/`
+
+### Qué encontrarás en la web
+- Sobre mí + competencias
+- Proyectos (CCHS-CSIC, RAG para arqueología, FAIRificación de bases de germoplasma)
+- Publicaciones 
 - Trayectoria profesional
-- Formación (Estudios / Cursos)
+- Formación (estudios) + cursos/certificaciones
+- Congresos y workshops
 - Contacto (formulario con fallback `mailto:`)
 
 ---
 
-## Competencias (tags)
-<!-- “Chips” con badges -->
-![Data Analysis](https://img.shields.io/badge/Data%20Analysis-111827?style=flat-pill)
-![Statistical Analysis](https://img.shields.io/badge/Statistical%20Analysis-111827?style=flat-pill)
-![Data Visualization](https://img.shields.io/badge/Data%20Visualization-111827?style=flat-pill)
-![Reproducible Research](https://img.shields.io/badge/Reproducible%20Research-111827?style=flat-pill)
-![Scientific Communication](https://img.shields.io/badge/Scientific%20Communication-111827?style=flat-pill)
-![GitHub](https://img.shields.io/badge/GitHub-111827?style=flat-pill&logo=github&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-111827?style=flat-pill&logo=linux&logoColor=white)
+## Skills / Competencias (tags)
+**Data / Knowledge / Research**
+- `FAIR data`, `Interoperability`, `Ontologies`, `Semantic modeling`, `ETL`, `Open science`
 
-## Lenguajes de programación
-![Python](https://img.shields.io/badge/Python-22c55e?style=flat-pill&logo=python&logoColor=white)
-![R](https://img.shields.io/badge/R-22c55e?style=flat-pill&logo=r&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-22c55e?style=flat-pill)
-![JavaScript](https://img.shields.io/badge/JavaScript-22c55e?style=flat-pill&logo=javascript&logoColor=111827)
-![Bash](https://img.shields.io/badge/Bash-22c55e?style=flat-pill&logo=gnubash&logoColor=white)
+**Programming**
+- `Python`, `R`, `SQL`, `Bash`
 
 ---
 
-## Publicar en GitHub Pages
-1. Ve a **Settings → Pages**
-2. En **Build and deployment**
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/ (root)`
-3. Espera 1–5 minutos.
+## Run locally / Desarrollo local
+**Option A (VS Code + Live Server)**
+1. Open the repo in VS Code
+2. Install the extension **Live Server**
+3. Right click `index.html` → **Open with Live Server**
 
-## Desarrollo local
-Opción simple con VS Code:
-1. Abre el repo en VS Code
-2. Instala la extensión **Live Server**
-3. Clic derecho en `index.html` → **Open with Live Server**
+**Option B (any local server)**
+```bash
+python -m http.server 8000
+# then open http://localhost:8000

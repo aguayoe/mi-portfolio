@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const nav = document.getElementById('main-nav');
   const overlay = document.getElementById('nav-overlay');
 
-  // ---------
-  // Menú móvil
-  // ---------
   function openNav() {
     document.body.classList.add('nav-open');
     if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
