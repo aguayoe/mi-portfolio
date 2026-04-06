@@ -1,50 +1,92 @@
-// scripts.js: validación básica y fallback por mailto cuando no hay backend.
-// El formulario ahora construye un mailto: que abre el cliente de correo del usuario.
-// Asegúrate de reemplazar la dirección en data-email del form por la tuya.
+// scripts.js
+// - Menú móvil accesible (hamburguesa + overlay + Esc)
+// - Formulario: fallback por mailto cuando no hay backend.
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   const mailtoLinkEl = document.getElementById('mailto-link');
 
+  const navToggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
+  const overlay = document.getElementById('nav-overlay');
+
+  // ---------
+  // Menú móvil
+  // ---------
+  function openNav() {
+    document.body.classList.add('nav-open');
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
+    if (overlay) overlay.hidden = false;
+  }
+
+  function closeNav() {
+    document.body.classList.remove('nav-open');
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    if (overlay) overlay.hidden = true;
+  }
+
+  if (overlay) overlay.hidden = true;
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', function () {
+      const isOpen = document.body.classList.contains('nav-open');
+      if (isOpen) closeNav();
+      else openNav();
+    });
+
+    if (overlay) overlay.addEventListener('click', closeNav);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeNav();
+    });
+
+    nav.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener('click', closeNav);
+    });
+  }
+
+  // ---------
+  // Formulario mailto fallback
+  // ---------
   if (!form) return;
 
-  // Actualiza el enlace mailto visible (aside) si apruebas otra dirección
-  const configuredEmail = form.getAttribute('data-email') || (mailtoLinkEl && mailtoLinkEl.getAttribute('href').replace('mailto:', ''));
+  const configuredEmail =
+    form.getAttribute('data-email') ||
+    (mailtoLinkEl && mailtoLinkEl.getAttribute('href') && mailtoLinkEl.getAttribute('href').replace('mailto:', ''));
+
   if (mailtoLinkEl && configuredEmail) {
     mailtoLinkEl.setAttribute('href', `mailto:${configuredEmail}`);
+    mailtoLinkEl.textContent = configuredEmail;
   }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    status.textContent = 'Preparando tu cliente de correo...';
+    if (status) status.textContent = 'Preparando tu cliente de correo...';
 
     const name = form.querySelector('#name').value.trim();
     const email = form.querySelector('#email').value.trim();
     const message = form.querySelector('#message').value.trim();
 
     if (!name || !email || !message) {
-      status.textContent = 'Por favor completa todos los campos.';
+      if (status) status.textContent = 'Por favor completa todos los campos.';
       return;
     }
 
-    // Construimos el mailto con asunto y cuerpo
-    const mailto = (configuredEmail || '') +
-      '?subject=' + encodeURIComponent(`Contacto desde portfolio: ${name}`) +
-      '&body=' + encodeURIComponent(`Nombre: ${name}
-Email: ${email}
+    const mailto =
+      (configuredEmail || '') +
+      '?subject=' +
+      encodeURIComponent(`Contacto desde portfolio: ${name}`) +
+      '&body=' +
+      encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`);
 
-Mensaje:
-${message}`);
-
-    // Intenta abrir el cliente de correo
     try {
-      // window.location.href abrirá el cliente por defecto
       window.location.href = `mailto:${mailto}`;
-      status.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje. Si no se abre, copia el email y envíalo manualmente.';
+      if (status) status.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
       form.reset();
     } catch (err) {
       console.error(err);
-      status.textContent = 'No se pudo abrir el cliente de correo. Por favor, envía un email manualmente a ' + (configuredEmail || 'tu@email');
+      if (status) status.textContent = 'No se pudo abrir el cliente de correo. Envía un email manualmente.';
     }
   });
 });
