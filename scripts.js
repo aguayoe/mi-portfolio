@@ -1,7 +1,3 @@
-// scripts.js
-// - Menú móvil accesible (hamburguesa + overlay + Esc)
-// - Formulario: fallback por mailto cuando no hay backend.
-
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
@@ -11,9 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const nav = document.getElementById('main-nav');
   const overlay = document.getElementById('nav-overlay');
 
-  // ---------
-  // Menú móvil
-  // ---------
   function openNav() {
     document.body.classList.add('nav-open');
     if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
@@ -46,47 +39,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---------
-  // Formulario mailto fallback
-  // ---------
-  if (!form) return;
+  if (form) {
+    const configuredEmail =
+      form.getAttribute('data-email') ||
+      (mailtoLinkEl && mailtoLinkEl.getAttribute('href') && mailtoLinkEl.getAttribute('href').replace('mailto:', ''));
 
-  const configuredEmail =
-    form.getAttribute('data-email') ||
-    (mailtoLinkEl && mailtoLinkEl.getAttribute('href') && mailtoLinkEl.getAttribute('href').replace('mailto:', ''));
+    if (mailtoLinkEl && configuredEmail) {
+      mailtoLinkEl.setAttribute('href', `mailto:${configuredEmail}`);
+      mailtoLinkEl.textContent = configuredEmail;
+    }
 
-  if (mailtoLinkEl && configuredEmail) {
-    mailtoLinkEl.setAttribute('href', `mailto:${configuredEmail}`);
-    mailtoLinkEl.textContent = configuredEmail;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (status) status.textContent = 'Preparando tu cliente de correo...';
+
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const message = form.querySelector('#message').value.trim();
+
+      if (!name || !email || !message) {
+        if (status) status.textContent = 'Por favor completa todos los campos.';
+        return;
+      }
+
+      const mailto =
+        (configuredEmail || '') +
+        '?subject=' +
+        encodeURIComponent(`Contacto desde portfolio: ${name}`) +
+        '&body=' +
+        encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`);
+
+      try {
+        window.location.href = `mailto:${mailto}`;
+        if (status) status.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        if (status) status.textContent = 'No se pudo abrir el cliente de correo. Envía un email manualmente.';
+      }
+    });
   }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (status) status.textContent = 'Preparando tu cliente de correo...';
-
-    const name = form.querySelector('#name').value.trim();
-    const email = form.querySelector('#email').value.trim();
-    const message = form.querySelector('#message').value.trim();
-
-    if (!name || !email || !message) {
-      if (status) status.textContent = 'Por favor completa todos los campos.';
-      return;
-    }
-
-    const mailto =
-      (configuredEmail || '') +
-      '?subject=' +
-      encodeURIComponent(`Contacto desde portfolio: ${name}`) +
-      '&body=' +
-      encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`);
-
-    try {
-      window.location.href = `mailto:${mailto}`;
-      if (status) status.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      if (status) status.textContent = 'No se pudo abrir el cliente de correo. Envía un email manualmente.';
-    }
-  });
+  const scrollTopBtn = document.getElementById('scroll-top');
+  function updateScrollTopBtn() {
+    if (!scrollTopBtn) return;
+    if (window.scrollY > 450) scrollTopBtn.classList.add('is-visible');
+    else scrollTopBtn.classList.remove('is-visible');
+  }
+  updateScrollTopBtn();
+  window.addEventListener('scroll', updateScrollTopBtn, { passive: true });
 });
