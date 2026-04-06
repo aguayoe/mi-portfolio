@@ -8,6 +8,7 @@
   --accent:#22d3ee;
   --accent-ink:#042027;
 
+  /* azul de CTAs (hover de Ver proyectos) */
   --cta-blue: #38bdf8;
   --cta-blue-ink: #ffffff;
 
@@ -23,7 +24,7 @@
 
   --focus: 0 0 0 3px rgba(34,211,238,0.35);
 
-  /* Contact section (light blue) */
+  /* Contact section (light blue background) */
   --contact-bg: rgba(56, 189, 248, 0.16);
   --contact-border: rgba(56, 189, 248, 0.25);
   --contact-text: #0b1220;
@@ -125,6 +126,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .main-nav a{color: var(--muted);font-weight:800;}
 .main-nav a:hover{ color: var(--text); }
 
+/* CONTACTO (botón del menú): mismo azul que CTAs */
 .btn-primary{
   background: var(--cta-blue);
   color: var(--cta-blue-ink);
@@ -149,6 +151,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 0;}
 
+/* Botones hero: borde azul + relleno azul solo hover */
 .btn,
 .btn-outline{
   display:inline-flex;
@@ -215,8 +218,6 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
 .timeline::before{content:"";position:absolute;left: 6px;top: 4px;bottom: 4px;width: 2px;background: rgba(56,189,248,0.35);border-radius: 2px;}
 .timeline-item{position: relative;display: grid;grid-template-columns: 14px 1fr;gap: 12px;padding: 10px 0;}
 .timeline-dot{width: 12px;height: 12px;border-radius: 999px;background: var(--cta-blue);box-shadow: 0 0 0 3px rgba(56,189,248,0.18);margin-top: 4px;}
-.timeline-content{min-width:0}
-.timeline-title{margin-bottom:4px}
 
 .contact-grid{grid-template-columns:1fr 340px}
 .contact-form label{display:block;margin-top:12px;font-weight:900}
@@ -234,7 +235,7 @@ h2{margin: 0 0 14px 0;font-size: 1.5rem;letter-spacing: -0.01em;}
 
 .nav-overlay{position: fixed;inset: 0;background: rgba(0,0,0,0.45);}
 
-/* Contact section: light blue background + dark text */
+/* Contact section: light blue background + readable text */
 .section-contact{
   background: var(--contact-bg);
   border-top: 1px solid var(--contact-border);
