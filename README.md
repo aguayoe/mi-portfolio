@@ -1,38 +1,54 @@
-# Portfolio para GitHub Pages (HTML/CSS/JS)
+# mi-portfolio
 
-Portfolio estático listo para publicar en **GitHub Pages**.
+Portfolio personal (sitio estático) hecho con **HTML/CSS/JavaScript** y publicado con **GitHub Pages**.
 
-## Demo
-- URL: `https://aguayoe.github.io/mi-portfolio/`
+- **Demo:** `https://aguayoe.github.io/mi-portfolio/`
+- **Contacto:** `elena.aguayo@cchs.csic.es`
 
-## Qué incluye
-- Secciones: Proyectos, Cursos, Sobre mí, Contacto.
-- **Menú móvil** tipo hamburguesa (accesible).
-- **Tema claro/oscuro** (guarda preferencia en `localStorage` y respeta `prefers-color-scheme`).
-- Formulario de contacto con **fallback vía `mailto:`** (abre el cliente de correo del usuario).
-- Mejoras básicas de SEO (Open Graph/Twitter card) y accesibilidad.
+## Qué encontrarás en la web
+- **Sobre mí** (introducción + “chips” de habilidades y lenguajes).
+- **Proyectos** (cards con demo/código).
+- **Publicaciones científicas** (con enlace a ORCID).
+- **Trayectoria profesional**.
+- **Formación** (separado en *Estudios* y *Cursos*).
+- **Competencias**.
+- **Contacto** (formulario con fallback `mailto:`).
+
+## Skills (tags)
+**Data / Research**
+- `Data Analysis`, `Statistical Analysis`, `Data Visualization`, `Reproducible Research`, `Scientific Communication`
+
+**Tools**
+- `Git`, `GitHub`, `Linux`, `Jupyter`
+
+**Programming Languages**
+- `Python`, `R`, `SQL`, `JavaScript`, `Bash`
+
+## Perfiles
+- GitHub: `https://github.com/aguayoe`
+- LinkedIn: `https://www.linkedin.com/in/elenaguayo/`
+- ORCID: `https://orcid.org/0009-0005-8143-0428`
+- Google Scholar: `https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es`
 
 ## Publicar en GitHub Pages
-1. Ve a **Settings → Pages**.
-2. En **Build and deployment**:
+1. Ve a **Settings → Pages**
+2. En **Build and deployment**
    - Source: `Deploy from a branch`
    - Branch: `main`
    - Folder: `/ (root)`
-3. Espera 1–5 minutos y abre la URL del apartado Demo.
+3. Espera 1–5 minutos.
 
-## Desarrollo local (opción simple)
-- Abre la carpeta en VS Code
-- Instala la extensión **Live Server**
-- Clic derecho en `index.html` → **Open with Live Server**
+## Desarrollo local
+Opción simple con VS Code:
+1. Abre el repo en VS Code
+2. Instala la extensión **Live Server**
+3. Clic derecho en `index.html` → **Open with Live Server**
 
 ## Contacto (formulario)
 El formulario usa un fallback `mailto:` y toma el email desde este atributo en `index.html`:
 
 ```html
-<form id="contact-form" data-email="TU_EMAIL_AQUI">
+<form id="contact-form" data-email="elena.aguayo@cchs.csic.es">
 ```
 
-## Personalización rápida
-- Sustituye los placeholders en “Proyectos destacados” (demo y repositorio).
-- Revisa enlaces a redes sociales.
-- (Opcional) cambia el `og:image` por una imagen propia tipo `og-image.png`.
+> Si prefieres envíos “reales” (sin abrir el cliente de correo), se puede integrar Formspree/Getform o un backend ligero.

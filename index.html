@@ -5,31 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Elena Aguayo — Portfolio</title>
-  <meta name="description" content="Portfolio de Elena Aguayo — proyectos, formación y contacto." />
+  <meta name="description" content="Portfolio de Elena Aguayo — trayectoria, proyectos, publicaciones y contacto." />
+  <meta name="theme-color" content="#0b1220" />
 
-  <!-- Canonical (ajusta si usas dominio propio) -->
   <link rel="canonical" href="https://aguayoe.github.io/mi-portfolio/" />
-
-  <!-- Theme color (se actualiza vía JS según tema) -->
-  <meta name="theme-color" content="#0f1720" id="theme-color" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Elena Aguayo — Portfolio" />
-  <meta property="og:description" content="Proyectos, formación y contacto." />
+  <meta property="og:description" content="Trayectoria, proyectos, publicaciones y contacto." />
   <meta property="og:url" content="https://aguayoe.github.io/mi-portfolio/" />
-  <!-- Puedes reemplazar por una imagen tipo /og-image.png más adelante -->
   <meta property="og:image" content="https://aguayoe.github.io/mi-portfolio/avatar.webp" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Elena Aguayo — Portfolio" />
-  <meta name="twitter:description" content="Proyectos, formación y contacto." />
+  <meta name="twitter:description" content="Trayectoria, proyectos, publicaciones y contacto." />
   <meta name="twitter:image" content="https://aguayoe.github.io/mi-portfolio/avatar.webp" />
 
-  <!-- Favicon (data URI sencillo; si luego quieres, lo cambiamos a un archivo .ico/.png) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306b6d4'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-size='34' font-family='Arial' fill='%23042227'%3EEA%3C/text%3E%3C/svg%3E" />
-
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2322d3ee'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-size='34' font-family='Arial' fill='%23042227'%3EEA%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -46,16 +40,6 @@
       <div class="header-actions">
         <button
           type="button"
-          class="icon-btn"
-          id="theme-toggle"
-          aria-label="Cambiar tema (claro/oscuro)"
-          title="Cambiar tema"
-        >
-          <span class="icon" aria-hidden="true">◐</span>
-        </button>
-
-        <button
-          type="button"
           class="icon-btn hamburger"
           id="nav-toggle"
           aria-controls="main-nav"
@@ -67,32 +51,41 @@
       </div>
 
       <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-        <a href="#proyectos">Proyectos</a>
-        <a href="#cursos">Cursos</a>
         <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#formacion">Formación</a>
+        <a href="#competencias">Competencias</a>
         <a href="#contacto" class="btn-primary">Contacto</a>
       </nav>
     </div>
 
-    <!-- Overlay para móvil -->
     <div class="nav-overlay" id="nav-overlay" hidden></div>
   </header>
 
   <main id="contenido">
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <!-- SOBRE MÍ primero (hero) -->
+    <section class="hero" id="sobre-mi" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1 id="hero-title">Hola, soy Elena Aguayo</h1>
+          <h1 id="hero-title">Sobre mí</h1>
+          <p class="lead">
+            Soy <strong>Elena Aguayo</strong>. Me interesa la ciencia abierta y el uso de datos para responder preguntas
+            reales. Estoy aprendiendo nuevas tecnologías y comparto mis proyectos y publicaciones aquí.
+          </p>
+
           <p class="muted">
-            Ciencia abierta. Estoy aprendiendo nuevas tecnologías y comparto mis proyectos aquí.
+            Contacto directo: <a href="mailto:elena.aguayo@cchs.csic.es">elena.aguayo@cchs.csic.es</a>
           </p>
 
           <p class="hero-actions">
             <a href="#proyectos" class="btn">Ver proyectos</a>
+            <a href="#publicaciones" class="btn-outline">Ver publicaciones</a>
             <a href="#contacto" class="btn-outline">Contactar</a>
           </p>
 
-          <div class="social" aria-label="Redes sociales">
+          <div class="social" aria-label="Redes y perfiles">
             <a href="https://github.com/aguayoe" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
               <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                 <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z" />
@@ -104,6 +97,46 @@
                 <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.53-1 1.83-2.2 3.77-2.2C23 8 24 10.2 24 13.2V24h-4v-9.5c0-2.3-.04-5.2-3.2-5.2-3.2 0-3.7 2.5-3.7 5V24h-4V8z"/>
               </svg>
             </a>
+
+            <!-- ORCID -->
+            <a href="https://orcid.org/0009-0005-8143-0428" aria-label="ORCID" target="_blank" rel="noopener noreferrer" class="chip-link">
+              <span aria-hidden="true" class="chip">iD</span>
+              <span class="sr-only">ORCID</span>
+            </a>
+
+            <!-- Google Scholar (solo aquí, no al final con el resto) -->
+            <a href="https://scholar.google.com/citations?user=sicaUKgAAAAJ&hl=es" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer" class="chip-link">
+              <span aria-hidden="true" class="chip">GS</span>
+              <span class="sr-only">Google Scholar</span>
+            </a>
+          </div>
+
+          <!-- Bloque tipo “chips” como el ejemplo -->
+          <div class="hero-skills" aria-label="Resumen de habilidades">
+            <div class="skills-block">
+              <h2 class="skills-title">Skills</h2>
+              <ul class="chips" aria-label="Skills">
+                <li>Data Analysis</li>
+                <li>Statistical Analysis</li>
+                <li>Data Visualization</li>
+                <li>Reproducible Research</li>
+                <li>Scientific Communication</li>
+                <li>GitHub</li>
+                <li>Linux</li>
+                <li>Web Development</li>
+              </ul>
+            </div>
+
+            <div class="skills-block">
+              <h2 class="skills-title">Programming Languages</h2>
+              <ul class="chips chips-green" aria-label="Lenguajes de programación">
+                <li>R</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+                <li>Bash</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -122,8 +155,8 @@
 
     <section id="proyectos" class="section" aria-labelledby="proyectos-title">
       <div class="container">
-        <h2 id="proyectos-title">Proyectos destacados</h2>
-        <p class="muted">Sustituye los placeholders por tus proyectos reales (demo y repositorio).</p>
+        <h2 id="proyectos-title">Proyectos</h2>
+        <p class="muted">Sustituye estos ejemplos por proyectos reales (ideal: demo + repositorio + 2–3 resultados).</p>
 
         <div class="grid projects-grid">
           <article class="card project-card">
@@ -174,28 +207,106 @@
       </div>
     </section>
 
-    <section id="cursos" class="section" aria-labelledby="cursos-title">
+    <section id="publicaciones" class="section" aria-labelledby="publicaciones-title">
       <div class="container">
-        <h2 id="cursos-title">Cursos y formación</h2>
+        <h2 id="publicaciones-title">Publicaciones científicas</h2>
         <div class="card">
-          <ul class="muted">
-            <li><strong>Curso:</strong> Nombre del curso — plataforma — fecha</li>
-            <li><strong>Nanodegree:</strong> Ejemplo — contenido principal</li>
-            <li><strong>Certificación:</strong> Nombre — emisor — fecha</li>
+          <ul class="list">
+            <li>
+              <strong>Título de publicación (Año)</strong><br/>
+              <span class="muted">Revista/Congreso · DOI/URL</span>
+            </li>
+            <li>
+              <strong>Otra publicación (Año)</strong><br/>
+              <span class="muted">Revista/Congreso · DOI/URL</span>
+            </li>
           </ul>
-          <p class="muted">Puedes añadir enlaces a certificados o proyectos prácticos relacionados.</p>
+
+          <p class="muted">
+            Listado completo en
+            <a href="https://orcid.org/0009-0005-8143-0428" target="_blank" rel="noopener noreferrer">ORCID</a>.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="sobre-mi" class="section" aria-labelledby="sobre-mi-title">
+    <section id="trayectoria" class="section" aria-labelledby="trayectoria-title">
       <div class="container">
-        <h2 id="sobre-mi-title">Sobre mí</h2>
-        <div class="card">
-          <p class="muted">
-            Pequeña biografía: formación, intereses, cómo trabajas (p. ej. diseño iterativo, pruebas, revisión por pares).
-            Menciona qué buscas: trabajo, freelance, prácticas, etc.
-          </p>
+        <h2 id="trayectoria-title">Trayectoria profesional</h2>
+        <div class="grid two-col">
+          <article class="card">
+            <h3>Puesto — Organización</h3>
+            <p class="muted">Mes/Año – Mes/Año · Ciudad/Remoto</p>
+            <ul class="list">
+              <li>Logro/impacto medible (p. ej. “reduje X%”, “automaticé Y”).</li>
+              <li>Responsabilidad principal (herramientas/stack).</li>
+              <li>Colaboración con equipos / publicaciones / etc.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Puesto — Organización</h3>
+            <p class="muted">Mes/Año – Mes/Año</p>
+            <ul class="list">
+              <li>Logro/impacto.</li>
+              <li>Responsabilidad.</li>
+              <li>Resultado.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacion" class="section" aria-labelledby="formacion-title">
+      <div class="container">
+        <h2 id="formacion-title">Formación</h2>
+
+        <div class="grid two-col">
+          <article class="card" aria-labelledby="estudios-title">
+            <h3 id="estudios-title">Estudios</h3>
+            <ul class="list">
+              <li>
+                <strong>Grado/Máster/Doctorado</strong><br/>
+                <span class="muted">Universidad/Institución · Año – Año</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card" aria-labelledby="cursos-title">
+            <h3 id="cursos-title">Cursos</h3>
+            <ul class="list">
+              <li>
+                <strong>Curso</strong><br/>
+                <span class="muted">Plataforma · Fecha · (enlace al certificado)</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competencias" class="section" aria-labelledby="competencias-title">
+      <div class="container">
+        <h2 id="competencias-title">Competencias</h2>
+
+        <div class="grid two-col">
+          <div class="card">
+            <h3>Datos y ML</h3>
+            <ul class="list">
+              <li>Modelado, validación, métricas</li>
+              <li>EDA, limpieza, reproducibilidad</li>
+              <li>Visualización</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Herramientas</h3>
+            <ul class="list">
+              <li>Python · SQL</li>
+              <li>Git/GitHub</li>
+              <li>Jupyter</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -208,9 +319,9 @@
           <div class="card contact-card">
             <p class="muted">
               ¿Quieres hablar de un proyecto o colaborar? Escríbeme usando el formulario y te contesto por email.
+              También puedes escribir directamente a <a href="mailto:elena.aguayo@cchs.csic.es">elena.aguayo@cchs.csic.es</a>.
             </p>
 
-            <!-- Fallback mailto -->
             <form id="contact-form" class="contact-form" method="GET" data-email="elena.aguayo@cchs.csic.es">
               <label for="name">Nombre</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
@@ -229,12 +340,18 @@
           <aside class="card info-card" aria-label="Otros datos de contacto">
             <h3>También puedes</h3>
             <p class="muted">
-              Enviar un email directo a
+              Email:
               <a id="mailto-link" href="mailto:elena.aguayo@cchs.csic.es">elena.aguayo@cchs.csic.es</a>.
             </p>
+
             <p class="muted">
-              Ver mi código en
-              <a href="https://github.com/aguayoe" target="_blank" rel="noopener noreferrer">GitHub</a>.
+              GitHub:
+              <a href="https://github.com/aguayoe" target="_blank" rel="noopener noreferrer">aguayoe</a>.
+            </p>
+
+            <p class="muted">
+              ORCID:
+              <a href="https://orcid.org/0009-0005-8143-0428" target="_blank" rel="noopener noreferrer">0009-0005-8143-0428</a>.
             </p>
 
             <h4>Redes</h4>
