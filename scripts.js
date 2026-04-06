@@ -1,3 +1,8 @@
+// scripts.js
+// - Menú móvil accesible (hamburguesa + overlay + Esc)
+// - Formulario: fallback por mailto cuando no hay backend.
+// - Botón "subir arriba" (aparece al hacer scroll)
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
@@ -39,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---------
+  // Formulario mailto fallback
+  // ---------
   if (form) {
     const configuredEmail =
       form.getAttribute('data-email') ||
@@ -80,6 +88,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---------
+  // Botón "subir arriba"
+  // ---------
   const scrollTopBtn = document.getElementById('scroll-top');
   function updateScrollTopBtn() {
     if (!scrollTopBtn) return;
