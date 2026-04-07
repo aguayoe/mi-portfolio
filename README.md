@@ -1,6 +1,7 @@
 <div align="center">
 
-# ¡Hey! Soy Elena Aguayo 👩🏻‍💻
+# ¡Hey! I am Elena Aguayo 👩🏻‍💻
+### Personal portfolio · HTML · CSS · JavaScript · GitHub Pages
 
 Personal portfolio (static site) built with **HTML · CSS · JavaScript**, published with **GitHub Pages**.  
 Portfolio personal (sitio estático) hecho con **HTML · CSS · JavaScript** y publicado con **GitHub Pages**.
@@ -9,6 +10,11 @@ Portfolio personal (sitio estático) hecho con **HTML · CSS · JavaScript** y p
   <a href="https://aguayoe.github.io/mi-portfolio/" target="_blank">
     <img alt="Demo" src="https://img.shields.io/badge/🌐%20Demo-GitHub%20Pages-22d3ee?style=for-the-badge" />
   </a>
+</p>
+
+<p>
+  <img alt="Status" src="https://img.shields.io/badge/Status-Active-16a34a?style=for-the-badge" />
+  <img alt="Type" src="https://img.shields.io/badge/Type-Static%20Site-111827?style=for-the-badge" />
 </p>
 
 <p>
@@ -33,58 +39,27 @@ Portfolio personal (sitio estático) hecho con **HTML · CSS · JavaScript** y p
 
 ---
 
-## About this repository (EN)
-This repository contains my personal portfolio website: projects, publications, professional experience, education, and contact.
-It’s intentionally kept **framework-free** to be fast, simple, and easy to maintain.
+## Qué hay aquí
+- Sitio estático del portfolio (HTML/CSS/JS)
+- Deploy con **GitHub Pages**
 
-### Live demo
-- `https://aguayoe.github.io/mi-portfolio/`
+## Estructura
+- `index.html` — página principal
+- `assets/` — imágenes, iconos, etc. (si aplica)
+- `css/` — estilos (si aplica)
+- `js/` — scripts (si aplica)
 
-### What you’ll find on the website
-- About me + skills 
-- Projects (CCHS-CSIC, RAG for archaeology, FAIRification for germplasm databases)
-- Publications 
-- Professional experience
-- Education (degrees) + courses/certifications
-- Conferences & workshops
-- Contact (form with `mailto:` fallback)
+## Cómo ver el sitio
+- Demo: `https://aguayoe.github.io/mi-portfolio/`
 
----
+## Desarrollo local
+Abre `index.html` en el navegador, o usa un servidor simple, por ejemplo:
 
-## Sobre este repositorio (ES)
-Este repositorio contiene mi web de portfolio: proyectos, publicaciones, trayectoria profesional, formación y contacto.
-Está hecho como sitio **estático y sin frameworks** para mantenerlo rápido, simple y fácil de actualizar.
-
-### Demo
-- `https://aguayoe.github.io/mi-portfolio/`
-
-### Qué encontrarás en la web
-- Sobre mí + competencias
-- Proyectos (CCHS-CSIC, RAG para arqueología, FAIRificación de bases de germoplasma)
-- Publicaciones 
-- Trayectoria profesional
-- Formación (estudios) + cursos/certificaciones
-- Congresos y workshops
-- Contacto (formulario con fallback `mailto:`)
-
----
-
-## Skills / Competencias (tags)
-**Data / Knowledge / Research**
-- `FAIR data`, `Interoperability`, `Ontologies`, `Semantic modeling`, `ETL`, `Open science`
-
-**Programming**
-- `Python`, `R`, `SQL`, `Bash`
-
----
-
-## Run locally / Desarrollo local
-**Option A (VS Code + Live Server)**
-1. Open the repo in VS Code
-2. Install the extension **Live Server**
-3. Right click `index.html` → **Open with Live Server**
-
-**Option B (any local server)**
 ```bash
 python -m http.server 8000
-# then open http://localhost:8000
+```
+
+Luego visita `http://localhost:8000`.
+
+## Publicación (GitHub Pages)
+Configura GitHub Pages en el repo (Settings → Pages) y selecciona la rama/carpeta de despliegue según tu estructura.
