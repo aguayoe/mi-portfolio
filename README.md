@@ -51,5 +51,3 @@ Personal portfolio (static site) built with **HTML · CSS · JavaScript** and pu
 ## How to view the site
 - Demo: `https://aguayoe.github.io/mi-portfolio/`
 
-## Local development
-Open `index.html`
