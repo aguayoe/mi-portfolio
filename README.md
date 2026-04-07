@@ -1,10 +1,9 @@
 <div align="center">
 
-# ¡Hey! I am Elena Aguayo 👩🏻‍💻
+# Hey! I am Elena Aguayo 👩🏻‍💻
 ### Personal portfolio · HTML · CSS · JavaScript · GitHub Pages
 
-Personal portfolio (static site) built with **HTML · CSS · JavaScript**, published with **GitHub Pages**.  
-Portfolio personal (sitio estático) hecho con **HTML · CSS · JavaScript** y publicado con **GitHub Pages**.
+Personal portfolio (static site) built with **HTML · CSS · JavaScript** and published with **GitHub Pages**.
 
 <p>
   <a href="https://aguayoe.github.io/mi-portfolio/" target="_blank">
@@ -39,27 +38,18 @@ Portfolio personal (sitio estático) hecho con **HTML · CSS · JavaScript** y p
 
 ---
 
-## Qué hay aquí
-- Sitio estático del portfolio (HTML/CSS/JS)
-- Deploy con **GitHub Pages**
+## What's inside
+- Static portfolio site (HTML/CSS/JS)
+- Deployment with **GitHub Pages**
 
-## Estructura
-- `index.html` — página principal
-- `assets/` — imágenes, iconos, etc. (si aplica)
-- `css/` — estilos (si aplica)
-- `js/` — scripts (si aplica)
+## Structure
+- `index.html` — main page
+- `assets/` — images, icons, etc. (if applicable)
+- `css/` — styles (if applicable)
+- `js/` — scripts (if applicable)
 
-## Cómo ver el sitio
+## How to view the site
 - Demo: `https://aguayoe.github.io/mi-portfolio/`
 
-## Desarrollo local
-Abre `index.html` en el navegador, o usa un servidor simple, por ejemplo:
-
-```bash
-python -m http.server 8000
-```
-
-Luego visita `http://localhost:8000`.
-
-## Publicación (GitHub Pages)
-Configura GitHub Pages en el repo (Settings → Pages) y selecciona la rama/carpeta de despliegue según tu estructura.
+## Local development
+Open `index.html`
