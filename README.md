@@ -44,9 +44,9 @@ Personal portfolio (static site) built with **HTML · CSS · JavaScript** and pu
 
 ## Structure
 - `index.html` — main page
-- `assets/` — images, icons, etc. (if applicable)
-- `css/` — styles (if applicable)
-- `js/` — scripts (if applicable)
+- `assets/` — images, icons, etc. 
+- `css/` — styles 
+- `js/` — scripts 
 
 ## How to view the site
 - Demo: `https://aguayoe.github.io/mi-portfolio/`
